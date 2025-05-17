@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lil Жид - Sigma Жид | Официальный релиз | Слушать онлайн</title>
+    <meta name="description" content="Официальный релиз трека Sigma Жид от Lil Жид. Слушайте на всех платформах: Telegram, SoundCloud, YouTube">
+    <meta name="keywords" content="Lil Жид, Sigma Жид, скачать трек, слушать онлайн, новый релиз 2023, русский рэп">
+    <meta property="og:title" content="Lil Жид - Sigma Жид">
+    <meta property="og:description" content="Официальный релиз трека Sigma Жид">
+    <meta property="og:image" content="https://lijew.github.io/liljid.jpg">
+    <meta property="og:url" content="https://lijew.github.io">
+    <meta property="og:type" content="music.song">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://lijew.github.io">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        
+        .bg-cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('liljid.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px) brightness(0.4);
+            z-index: -2;
+            transform: scale(1.1);
+        }
+        
+        .card {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .cover-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 25px;
+            perspective: 1000px;
+        }
+        
+        .cover {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .cover-container:hover .cover {
+            transform: rotateY(10deg) scale(1.05);
+        }
+        
+        h1 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #6C5CE7, #FD79A8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .artist {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+        }
+        
+        .player {
+            width: 100%;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        audio {
+            width: 100%;
+            outline: none;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(30, 30, 30, 0.8);
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        .btn-telegram {
+            background-color: #0088cc;
+        }
+        
+        .btn-soundcloud {
+            background-color: #ff5500;
+        }
+        
+        .btn-youtube {
+            background-color: #ff0000;
+        }
+        
+        .btn-icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+        }
+        
+        .qr-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: inline-block;
+        }
+        
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background: white;
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .qr-text {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 8px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 20px;
+            }
+            
+            .cover-container {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-cover"></div>
+    
+    <div class="card">
+        <div class="cover-container">
+            <img src="liljid.jpg" alt="Обложка Sigma Жид - Lil Жид" class="cover">
+        </div>
+        
+        <h1>Sigma Жид</h1>
+        <div class="artist">Lil Жид</div>
+        
+        <div class="player">
+            <audio controls>
+                <source src="sigmazhid.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио элемент.
+            </audio>
+        </div>
+        
+        <div class="buttons">
+            <a href="https://t.me/liljyd/11" class="btn btn-telegram">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+                </svg>
+                Слушать в Telegram
+            </a>
+            
+            <a href="https://soundcloud.com/liljyd/sigma-zhid" class="btn btn-soundcloud">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M7 17.939h-1v-8.068c.308-.231.639-.429 1-.566v8.634zm3 0h1v-9.224c-.229.265-.443.548-.621.857l-.379-.184v8.551zm-2 0h1v-8.848c-.508-.079-.623-.05-1-.01v8.858zm-4 0h1v-7.02c-.312.458-.555.971-.692 1.535l-.308-.183v5.668zm-3-5.25c-.021.143-.037.287-.037.437v4.813h1v-5.719c-.378.172-.741.38-.963.469zm16.992-.698c-.316-.05-.566-.103-1.122-.103-.983 0-1.732.327-2.298.858-.786.701-1.112 1.723-1.112 2.888 0 1.165.326 2.187 1.112 2.888.566.531 1.315.858 2.298.858.556 0 .806-.052 1.122-.103.63-.1 1.008-.262 1.008-.412 0-.151-.378-.312-1.008-.412-.316-.05-.566-.103-1.122-.103-.491 0-.857-.129-1.104-.35-.3-.271-.449-.7-.449-1.239 0-.539.149-.968.449-1.239.247-.221.613-.35 1.104-.35.556 0 .806-.052 1.122-.103.63-.1 1.008-.262 1.008-.412 0-.15-.378-.312-1.008-.412zm-5.992-.102h-1v6.75h1v-6.75zm-3 0h-1v6.75h1v-6.75z"/>
+                </svg>
+                Слушать на SoundCloud
+            </a>
+            
+            <a href="https://youtu.be/H0f3hw1LE2Y" class="btn btn-youtube">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="white">
+                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                </svg>
+                Слушать на YouTube
+            </a>
+        </div>
+        
+        <div class="qr-container">
+            <div id="qr-code" class="qr-code"></div>
+            <div class="qr-text">lijew.github.io</div>
+        </div>
+    </div>
+
+    <script>
+        // Генерация QR-кода
+        QRCode.toCanvas(document.getElementById('qr-code'), 'https://lijew.github.io', {
+            width: 100,
+            margin: 0,
+            color: {
+                dark: '#000000',
+                light: '#ffffff'
+            }
+        }, function (error) {
+            if (error) console.error(error)
+        });
+    </script>
+</body>
+</html>
